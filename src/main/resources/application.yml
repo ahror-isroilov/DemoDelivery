@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: demo delivery
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:postgresql://localhost:5432/demo_delivery
+    username: demo_delivery
+    password: demo_delivery
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      dialect: 'org.hibernate.dialect.PostgreSQL81Dialect'
+  servlet:
+    multipart:
+      location: var/images
+server:
+  port: 6543
